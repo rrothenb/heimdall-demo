@@ -1,0 +1,23 @@
+service: heimdall-demo
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  getToken:
+    handler: handler.getToken
+    environment:
+      userToken: ${env:USER_TOKEN}
+      orgToken: ${env:ORG_TOKEN}
+    events:
+      - http:
+          path: token
+          method: GET
+
+  home:
+    handler: handler.getPage
+    events:
+      - http:
+          path: home
+          method: GET

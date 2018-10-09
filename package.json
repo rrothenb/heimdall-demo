@@ -1,0 +1,8 @@
+{
+  "name": "heimdall_demo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
